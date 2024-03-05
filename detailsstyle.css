@@ -1,0 +1,31 @@
+body {
+  background-color: #bee9da;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+#main-container {
+  display: flex;
+}
+#card-container {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
+  border: 3px solid yellow;
+  border-radius: 30px;
+  align-items: center;
+}
+#info-details {
+  display: flex;
+  justify-content: space-between;
+}
+#backbutton {
+  height: 50px;
+  width: 50px;
+  background-image: url("./images/arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 3px solid yellow;
+  border-radius: 50px;
+}
