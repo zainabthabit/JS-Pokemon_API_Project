@@ -11,22 +11,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #45adaf9f;
+  /* box-shadow: 10px 0px 10px 10px gray; */
+  -webkit-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
+  box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
 }
 #nav-list {
   margin: 0;
   padding: 0;
   font-weight: 900;
-  height: 100%;
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 730px;
 }
 #logo-img {
   height: 50px;
   width: 50px;
-  padding-left: 25px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 #nav-link {
   width: 300px;
@@ -52,4 +57,9 @@ li {
 #button-section {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+#main-img {
+  padding-top: 0px;
+  width: 80%;
 }

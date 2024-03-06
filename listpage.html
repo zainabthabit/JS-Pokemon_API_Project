@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="./listpagestyle.css">
 </head>
 <body>
-    <div id="header-container" >
-        <img id="img-header" src="./images/pokimonlogo.png">
-        <div id="search"> 
-            <img id="search-icon" src="./images/search.png">
-            <input id="search-span"  placeholder="e.g. pikachu">
-            <button id="search-button"> GO</button>
-        </div> 
+    <div id="main-container">
+        <div id="header-container" >
+            <img id="img-header" src="./images/pokimonlogo.png">
+            <div id="search"> 
+                <img id="search-icon" src="./images/search.png">
+                <input id="search-span" type="search"  placeholder="e.g. pikachu">
+                <button id="search-button"> GO</button>
+            </div> 
+        </div>
+        <div id="list-container"></div>
     </div>
-    <div id="list-container"></div>
+    
+    <script src="./listApp.js"></script>
 </body>
 </html>
