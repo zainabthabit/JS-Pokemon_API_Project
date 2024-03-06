@@ -10,15 +10,22 @@ body {
 #card-container {
   display: flex;
   flex-direction: column;
-  height: 350px;
-  width: 250px;
+
+  height: 400px;
+  width: 280px;
   border: 3px solid yellow;
+  background-color: white;
   border-radius: 30px;
   align-items: center;
+  -webkit-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
+  box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.41);
 }
 #info-details {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+  font-size: medium;
 }
 #backbutton {
   height: 50px;
@@ -28,4 +35,28 @@ body {
   background-size: contain;
   border: 3px solid yellow;
   border-radius: 50px;
+  position: absolute;
+  left: 49%;
+  top: 25%;
+  margin-left: -150px;
+}
+
+#pokemon-name {
+  padding: 20px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#info-details2 {
+  display: flex;
+  width: 260px;
+  flex-direction: column;
+
+  line-height: 2.5;
+  font-size: medium;
+  text-align: justify;
+}
+#pokemonimg {
+  width: 120px;
+  height: auto;
 }

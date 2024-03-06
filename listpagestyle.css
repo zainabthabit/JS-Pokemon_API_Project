@@ -47,6 +47,8 @@ body {
   color: #4b6ce3;
   font-size: larger;
   font-weight: bold;
+  position: relative;
+  right: -9px;
 }
 #search-span {
   border: none;
@@ -92,4 +94,15 @@ body {
 .pokemonImg {
   width: 150px;
   height: auto;
+}
+#logobutton {
+  height: 50px;
+  width: 50px;
+  border: none;
+  padding-top: 30px;
+  padding-left: -30px;
+  border-radius: 50px;
+  background-image: url("./images/pokemon ball.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }

@@ -67,6 +67,10 @@ async function displayPokemons() {
 
 
 }
+const logobutton = document.getElementById("logobutton")
+logobutton.addEventListener("click", () => {
+    window.location.href = './index.html'
+})
 
 displayPokemons();
 //************search */
