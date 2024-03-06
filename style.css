@@ -10,7 +10,6 @@ body {
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #45adaf9f;
   /* box-shadow: 10px 0px 10px 10px gray; */
@@ -53,11 +52,12 @@ li {
   color: white;
   border: none;
   background-color: #bee9da;
+  cursor: pointer;
 }
 #button-section {
+  padding-top: 25px;
   display: flex;
   justify-content: center;
-  cursor: pointer;
 }
 #main-img {
   padding-top: 0px;

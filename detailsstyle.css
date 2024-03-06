@@ -39,6 +39,7 @@ body {
   left: 49%;
   top: 25%;
   margin-left: -150px;
+  cursor: pointer;
 }
 
 #pokemon-name {
