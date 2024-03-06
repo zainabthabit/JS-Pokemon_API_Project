@@ -24,12 +24,14 @@ body {
   background-color: white;
   border: 3px solid blue;
   border-radius: 59px;
-  padding-left: 0%;
+  padding-right: 0;
+  position: relative;
 }
 #search-icon {
   padding-top: 10px;
   height: 30px;
   width: 30px;
+  
 }
 #search-button {
   height: 50px;
@@ -40,9 +42,13 @@ body {
   color: #4b6ce3;
   font-size: larger;
   font-weight: bold;
+  position: relative;
+  right: -11px;
+ 
 }
 #search-span {
   border: none;
+  
 }
 #list-container {
   display: flex;
