@@ -39,6 +39,7 @@ async function displaypokemondetails() {
     if (!data) {
         return null;
     }
+    console.log(data);
     pokemonName.textContent = data.name;
 
     pokemonImg.src = data.sprites.front_default;
@@ -48,26 +49,48 @@ async function displaypokemondetails() {
 
 
     data.stats.forEach((stat, index) => {
+        const newSpan = document.createElement("span")
+        newSpan.textContent = stat.stat.name
         if (index == 0) {
-            pokemonStats.textContent += " " + stat.stat.name
+            pokemonStats.appendChild(newSpan)
         }
         else {
-            pokemonStats.textContent += " - " + stat.stat.name
+            const hyphen = document.createElement("span")
+            hyphen.textContent= " - "
+            pokemonStats.appendChild(hyphen)
+            pokemonStats.appendChild(newSpan)
+
         }
     })
     data.types.forEach((type, index) => {
+      
+        const newSpan2 = document.createElement("span2")
+        newSpan2.textContent = type.type.name
         if (index == 0) {
-            pokemonType.textContent += " " + type.type.name
+            pokemonType.appendChild(newSpan2)
         } else {
-            pokemonType.textContent += " - " + type.type.name
+            const hyphen = document.createElement("span2")
+            hyphen.textContent= " - "
+            pokemonType.appendChild(hyphen)
+            pokemonType.appendChild(newSpan2)
+            
         }
     })
     data.abilities.forEach((ability, index) => {
+        const newSpan3 = document.createElement("span3")
+        newSpan3.textContent = ability.ability.name
         if (index == 0) {
-            pokemonAbilities.textContent += "  " + ability.ability.name
+            pokemonAbilities.appendChild(newSpan3)
 
-        } else pokemonAbilities.textContent += " - " + ability.ability.name
+        }  const hyphen = document.createElement("span3")
+        hyphen.textContent= " - "
+        pokemonAbilitie.appendChild(hyphen)
+        pokemonAbilitie.appendChild(newSpan3)
 
     })
 }
 displaypokemondetails();
+const backbutton2 = document.getElementById("backbutton2")
+backbutton2.addEventListener("click", () => {
+    window.location.href = './index.html'
+})
