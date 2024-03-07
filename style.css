@@ -6,7 +6,7 @@ body {
 }
 #main-container {
   width: 80vw;
-  height: 90vh;
+  height: auto;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,6 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-  gap: 730px;
 }
 #logo-img {
   height: 50px;
@@ -53,13 +52,44 @@ li {
   border: none;
   background-color: #bee9da;
   cursor: pointer;
+ 
 }
 #button-section {
   padding-top: 25px;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 #main-img {
   padding-top: 0px;
   width: 80%;
 }
+@media  screen and (min-width: 769px) {
+  #nav-list {
+   
+    height: auto;
+    width: 80%;
+  }
+}
+@media  screen and (max-width: 1040px) {
+  #nav-list {
+    height: auto;
+  
+    width: 80%;
+  }
+}
+@media  screen and (min-width: 769px) {
+  button-section{
+   
+    height: auto;
+    width: 80%;
+  }
+}
+@media  screen and (max-width: 1040px) {
+  button-section {
+    height: auto;
+  
+    width: 80%;
+  }
+}
+

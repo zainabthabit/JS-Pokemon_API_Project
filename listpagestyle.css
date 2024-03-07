@@ -48,7 +48,7 @@ body {
   font-size: larger;
   font-weight: bold;
   position: relative;
-  right: -9px;
+  right: -30px;
 }
 #search-span {
   border: none;
@@ -100,10 +100,36 @@ body {
   width: 50px;
   border: none;
   padding-top: 30px;
-  padding-left: -30px;
+  padding-left: -100px;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("./images/pokemon ball.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+@media screen and (min-width: 769px) {
+  #search {
+    height: auto;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1040px) {
+  #search {
+    height: 20%;
+    width: 80%;
+  }
+  #search-icon {
+    height: 30%;
+    width: 25%;
+  }
+  #search-span {
+    height: auto;
+    width: 80%;
+  }
+  #search-button {
+    height: auto;
+    width: 30%;
+    position: relative;
+    right: 2px;
+  }
 }
