@@ -1,3 +1,4 @@
+let allPokemons = []
 async function getPokemonDetails(name) {
     if (!name) {
         return null;
@@ -10,7 +11,6 @@ async function getPokemonDetails(name) {
         }
 
         const data = await response.json();
-        // console.log(data)
         return data;
     } catch (error) {
         return null;
@@ -31,13 +31,12 @@ async function getPokemons() {
         return null;
     }
 }
-async function displayPokemons() {
-    const pokemons = await getPokemons();
-
-    if (!pokemons) {
-        pokemonsContainer.textContent = "Error fetching pokemons";
+async function displayPokemons(pokemons) {
+    if (!pokemons || pokemons.length === 0) {
+        pokemonsContainer.textContent = "No Pokemons";
         return;
     }
+    pokemonsContainer.innerHTML = null
 
     pokemons.forEach(async (pokemon) => {
         const pokemonDetails = await getPokemonDetails(pokemon.name)
@@ -72,10 +71,20 @@ logobutton.addEventListener("click", () => {
     window.location.href = './index.html'
 })
 
-displayPokemons();
 //************search */
 const searchInput = document.getElementById("search-span")
 const searchButton = document.getElementById("search-button")
 searchButton.addEventListener("click", () => {
-    pokemonsContainer.forEach()
+    const searchText = searchInput.value
+    const filteredPokemons = allPokemons.filter((pokemon) => {
+        return pokemon.name.includes(searchText)
+
+    })
+    displayPokemons(filteredPokemons)
 })
+
+window.onload = async () => {
+    allPokemons = await getPokemons();
+    displayPokemons(allPokemons);
+
+}
