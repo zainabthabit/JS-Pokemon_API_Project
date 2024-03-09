@@ -27,6 +27,7 @@ const pokemonImg4 = document.createElement("img")
 
 //////get pokemon forms
 async function getpokemonforms(name) {
+    console.log("=====> ", name)
     if (!name) {
         return null;
     }
@@ -94,24 +95,24 @@ async function displaypokemondetails() {
         }
         else {
             const hyphen = document.createElement("span")
-            hyphen.textContent= " - "
+            hyphen.textContent = " - "
             pokemonStats.appendChild(hyphen)
             pokemonStats.appendChild(newSpan)
 
         }
     })
     data.types.forEach((type, index) => {
-      
+
         const newSpan2 = document.createElement("span2")
         newSpan2.textContent = type.type.name
         if (index == 0) {
             pokemonType.appendChild(newSpan2)
         } else {
             const hyphen = document.createElement("span2")
-            hyphen.textContent= " - "
+            hyphen.textContent = " - "
             pokemonType.appendChild(hyphen)
             pokemonType.appendChild(newSpan2)
-            
+
         }
     })
     data.abilities.forEach((ability, index) => {
@@ -119,11 +120,12 @@ async function displaypokemondetails() {
         newSpan3.textContent = ability.ability.name
         if (index == 0) {
             pokemonAbilities.appendChild(newSpan3)
+        }
 
-        }  const hyphen = document.createElement("span3")
-        hyphen.textContent= " - "
-        pokemonAbilitie.appendChild(hyphen)
-        pokemonAbilitie.appendChild(newSpan3)
+        const hyphen = document.createElement("span3")
+        hyphen.textContent = " - "
+        pokemonAbilities.appendChild(hyphen)
+        pokemonAbilities.appendChild(newSpan3)
 
     })
     const forms = await getpokemonforms(name);
